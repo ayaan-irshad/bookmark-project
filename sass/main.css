@@ -213,9 +213,7 @@ html {
 }
 
 .features__tab {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -228,6 +226,7 @@ html {
           align-items: center;
   margin-left: 5rem;
   margin-top: 5rem;
+  margin-bottom: 10rem;
 }
 
 .features__tab--left {
@@ -284,23 +283,13 @@ html {
   color: #d3d3d3;
 }
 
-.features__nav a:focus {
-  border-bottom: 2px solid #fa5757;
-}
-
 .features__nav--btns {
   border-bottom: 1px solid #9194a1;
   display: inline-block;
   padding: 1.5rem 0rem;
 }
 
-.features__nav div {
-  display: none;
-}
-
-.features__nav div:target {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.border__for-btn {
+  border-bottom: 2px solid #fa5757;
 }
 /*# sourceMappingURL=main.css.map */
