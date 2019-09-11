@@ -1,0 +1,177 @@
+h2 {
+  font-weight: 500; }
+
+.btn-nav {
+  padding: 1.3rem 2.2rem;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all .2s; }
+  .btn-nav:hover {
+    filter: brightness(95%);
+    transform: scale(1.05) translateY(-0.8px); }
+  .btn-nav:focus {
+    outline: none; }
+  .btn-nav:active {
+    color: #fa5757;
+    transform: scale(1) translateY(0.3px); }
+
+.btn {
+  color: #fff;
+  background-color: #5368df;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  margin-top: 3rem;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+  transition: all .2s; }
+  .btn:hover {
+    filter: brightness(95%);
+    transform: scale(1.05) translateY(-0.8px); }
+  .btn:focus {
+    outline: none; }
+  .btn:active {
+    color: #5368df;
+    background-color: #fff;
+    border: 2px solid #5368df;
+    transform: scale(1) translateY(0.3px); }
+
+.shape {
+  height: 32rem;
+  width: 80rem;
+  background-color: #5368df;
+  border-radius: 300px; }
+
+.para {
+  color: #9194a1;
+  line-height: 1.5; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+body {
+  box-sizing: border-box;
+  font-size: 1.8rem;
+  font-family: 'Rubik', sans-serif;
+  overflow-x: hidden; }
+
+html {
+  font-size: 62.5%; }
+
+.header {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  padding-left: 13rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 4rem; }
+    .header__content--right {
+      position: relative; }
+      .header__content--right img {
+        position: relative;
+        z-index: 1; }
+      .header__content--right div {
+        position: absolute;
+        z-index: 0;
+        right: -330px;
+        bottom: 29px; }
+    .header__content--left {
+      width: 41%;
+      margin-top: -7rem; }
+      .header__content--left h1 {
+        margin-bottom: 4rem;
+        font-weight: 500;
+        font-size: 4rem; }
+      .header__content--left__btns button {
+        font-weight: 500;
+        padding: 1.5rem 3rem; }
+        .header__content--left__btns button:last-child {
+          color: black;
+          background-color: #f3f3f3;
+          box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1); }
+          .header__content--left__btns button:last-child:active {
+            border: 2px solid black; }
+  .header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 86%; }
+  .header__nav button {
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 500; }
+  .header__nav--login {
+    background-color: #fa5757;
+    color: #fff; }
+    .header__nav--login:active {
+      background-color: #fff;
+      border: 2px solid #fa5757; }
+
+.features {
+  height: 100vh;
+  padding-left: 7rem; }
+  .features__heading {
+    text-align: center; }
+  .features__para {
+    margin: 2rem auto;
+    width: 40%;
+    text-align: center; }
+  .features__tab {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5rem;
+    margin-top: 5rem; }
+    .features__tab--left {
+      position: relative; }
+      .features__tab--left img {
+        position: relative;
+        z-index: 1; }
+      .features__tab--left div {
+        position: absolute;
+        z-index: 0;
+        left: -345px;
+        bottom: -55px; }
+    .features__tab--right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 36%;
+      margin-right: 10rem; }
+      .features__tab--right h1 {
+        font-weight: 500;
+        margin-bottom: 2rem; }
+      .features__tab--right p {
+        text-align: left; }
+      .features__tab--right button {
+        padding: 1rem 2rem; }
+  .features__nav {
+    text-align: center; }
+    .features__nav a {
+      text-decoration: none;
+      padding: 1.5rem 3rem;
+      color: #d3d3d3; }
+      .features__nav a:focus {
+        border-bottom: 2px solid #fa5757; }
+    .features__nav--btns {
+      border-bottom: 1px solid #9194a1;
+      display: inline-block;
+      padding: 1.5rem 0rem; }
+    .features__nav div {
+      display: none; }
+    .features__nav div:target {
+      display: flex; }
