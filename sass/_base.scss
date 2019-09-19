@@ -126,13 +126,13 @@ html {
     padding-left: 7rem;
 
     &__heading {
-        text-align: center;
+        
      }
  
     &__para {
-         margin: 2rem auto;
-         width: 40%;
-         text-align: center;
+        margin: 2rem auto;
+        width: 40%;
+        text-align: center;
      }
 
 
@@ -212,4 +212,48 @@ html {
 
 .border__for-btn {
     border-bottom: 2px solid $color-secondary;
+}
+////////////////////////////////////////////////////
+/////////// HEADING SECTION
+
+.download {
+    height: 100vh;
+    
+    &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+        margin-top: -10rem;
+        
+        h3 {
+            font-weight: 400;
+
+        }
+        p {
+            font-size: 1.2rem;
+            color: $color-blue-gray;
+
+        }
+
+        button {
+            margin-top: -1rem;            
+            padding: 1rem 2rem;
+        }
+    }
+    &__para {
+        text-align: center;
+        margin: 2rem 38rem;
+    }
+}
+
+/////////////////////////////////////////////////
+/// FAQS SECTION
+
+.faq {
+    &__para {
+        width: 37%;
+        margin: 2rem auto;
+        text-align: center;
+    }
 }

@@ -71,3 +71,29 @@
     color: $color-blue-gray;
     line-height: 1.5;
 }
+
+///// DOWNLOAD CARD
+
+.card {
+    display: flex;
+    height: 35rem;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
+    margin-right: 4rem;
+    border-radius: 6px;
+
+    &:nth-child(2) {
+        margin-top: 10rem;
+        position: relative;
+    }
+
+    &:nth-child(3) {
+        margin-top: 20rem;
+        position: relative;
+    }
+
+
+}
+

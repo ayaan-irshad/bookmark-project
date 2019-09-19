@@ -1,5 +1,6 @@
-h2 {
+.h2 {
   font-weight: 500;
+  text-align: center;
 }
 
 .btn-nav {
@@ -72,6 +73,36 @@ h2 {
 .para {
   color: #9194a1;
   line-height: 1.5;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 35rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.2);
+  margin-right: 4rem;
+  border-radius: 6px;
+}
+
+.card:nth-child(2) {
+  margin-top: 10rem;
+  position: relative;
+}
+
+.card:nth-child(3) {
+  margin-top: 20rem;
+  position: relative;
 }
 
 *,
@@ -202,10 +233,6 @@ html {
   padding-left: 7rem;
 }
 
-.features__heading {
-  text-align: center;
-}
-
 .features__para {
   margin: 2rem auto;
   width: 40%;
@@ -291,5 +318,48 @@ html {
 
 .border__for-btn {
   border-bottom: 2px solid #fa5757;
+}
+
+.download {
+  height: 100vh;
+}
+
+.download__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90%;
+  margin-top: -10rem;
+}
+
+.download__box h3 {
+  font-weight: 400;
+}
+
+.download__box p {
+  font-size: 1.2rem;
+  color: #9194a1;
+}
+
+.download__box button {
+  margin-top: -1rem;
+  padding: 1rem 2rem;
+}
+
+.download__para {
+  text-align: center;
+  margin: 2rem 38rem;
+}
+
+.faq__para {
+  width: 37%;
+  margin: 2rem auto;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
