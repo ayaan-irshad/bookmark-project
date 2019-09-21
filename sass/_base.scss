@@ -15,6 +15,10 @@ body {
 
 html {
     font-size: 62.5%;
+
+    @media only screen and (max-width: 78.125em) {
+        font-size: 50%;
+    }
 }
 
 ////////////////////////////////////////////
@@ -30,11 +34,17 @@ html {
     flex-direction: column;
     justify-content: space-between;
     
+    &__logo {
+        height: 3rem;
+        width: 18rem;
+    }
+
     &__content {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-right: 4rem;
+
         
         &--right { //    HEADER RIGHT SECTION
 
@@ -42,8 +52,7 @@ html {
 
             img {
                 position: relative;
-                z-index: 1;
-                
+                z-index: 1;   
             }
             
             div {
@@ -189,14 +198,23 @@ html {
     &__nav {
         text-align: center;
 
-        a {
-            text-decoration: none;
-            padding: 1.5rem 3rem;
-            color: #d3d3d3;
+        &--btns{
 
-            &:focus {
-                //border-bottom: 2px solid $color-secondary;                   
+            .tabbed-btns {
+                border: none;
+                padding: 1.5rem 3rem;
+                color: #d3d3d3;
+                font-size: 2rem;
+                background-color: #fff;
+                cursor: pointer;
+
+                &:focus {
+                    //border-bottom: 2px solid $color-secondary;       
+                    outline: none;
+                }
+
             }
+
         }
         
 
@@ -204,7 +222,7 @@ html {
         &--btns {
             border-bottom: 1px solid $color-blue-gray;
             display: inline-block;
-            padding: 1.5rem 0rem;
+
         }
     }
 }
@@ -218,7 +236,8 @@ html {
 
 .download {
     height: 100vh;
-    
+    margin-top: 15rem;
+    margin-bottom: 10rem;
     &__box {
         display: flex;
         justify-content: center;
@@ -251,9 +270,154 @@ html {
 /// FAQS SECTION
 
 .faq {
+    width: 100%;
     &__para {
         width: 37%;
         margin: 2rem auto;
         text-align: center;
+    }
+
+    &__ques {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30%;
+        width: 40%;
+        padding: 2rem 0;
+        border-bottom: 2px solid #eee;
+        cursor: pointer;
+
+        &-q {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin: 0 auto;
+            position: relative;
+            &:hover {
+                color: $color-secondary;
+            }
+            
+        }
+
+        &--para {
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+            font-size: 1.6rem;
+            margin: 2rem auto;
+        }
+
+
+        &--open {
+            display: inline;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        
+    }
+
+    &-arrow {
+        height: 2rem;
+        width: 2rem;
+    }
+    &__arrow {
+        transform: rotate(180deg);
+        -webkit-transform:rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+
+        fill: $color-secondary;
+
+    }
+
+    &__btn {
+        padding: 1.5rem 2rem;
+        margin: 4rem auto;
+        display: block;
+    }
+}
+
+//////////////////////////////////////////////////////////////
+/////////////// CONTACT US SECTION
+
+.contact {
+    height: 40vh;
+    background-color: $color-primary;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    
+    &__h3 {
+        margin-top: 4rem;   
+        font-weight: 400;
+    }
+
+    &__h2 {
+        font-weight: 500;
+    }
+
+    &__form {
+        display: flex;
+        width: 30%;
+        margin: 4rem auto;
+        justify-content: space-between;
+
+        &--field {
+            width: 60%;
+            border-radius: 4px;
+            padding: 1rem 2rem;
+            border: none;
+
+        }
+
+        &--btn {
+            background-color: $color-secondary;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            margin-top: 0;
+
+        }
+    }    
+}
+
+/////////////////////////////////////////////////////////////////
+//////////// FOOTER SECTION
+
+.footer {
+    display: flex;
+    background-color: $color-blue-very-dark;
+    justify-content: space-between;
+    align-items: center;
+
+
+    height: 10vh;
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        &--logo {
+            height: 5rem;
+            width: 20rem;
+        }
+    }
+
+
+    &__social {        
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 10%;
     }
 }

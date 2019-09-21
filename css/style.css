@@ -1,6 +1,10 @@
 .h2 {
   font-weight: 500;
-  text-align: center; }
+  text-align: center;
+  font-size: 3.5rem; }
+
+h5 {
+  font-weight: 400; }
 
 .btn-nav {
   padding: 1.3rem 2.2rem;
@@ -81,6 +85,9 @@ body {
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 78.125em) {
+    html {
+      font-size: 50%; } }
 
 .header {
   padding-top: 3rem;
@@ -90,6 +97,9 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
+  .header__logo {
+    height: 3rem;
+    width: 18rem; }
   .header__content {
     display: flex;
     justify-content: space-between;
@@ -177,20 +187,26 @@ html {
         padding: 1rem 2rem; }
   .features__nav {
     text-align: center; }
-    .features__nav a {
-      text-decoration: none;
+    .features__nav--btns .tabbed-btns {
+      border: none;
       padding: 1.5rem 3rem;
-      color: #d3d3d3; }
+      color: #d3d3d3;
+      font-size: 2rem;
+      background-color: #fff;
+      cursor: pointer; }
+      .features__nav--btns .tabbed-btns:focus {
+        outline: none; }
     .features__nav--btns {
       border-bottom: 1px solid #9194a1;
-      display: inline-block;
-      padding: 1.5rem 0rem; }
+      display: inline-block; }
 
 .border__for-btn {
   border-bottom: 2px solid #fa5757; }
 
 .download {
-  height: 100vh; }
+  height: 100vh;
+  margin-top: 15rem;
+  margin-bottom: 10rem; }
   .download__box {
     display: flex;
     justify-content: center;
@@ -209,7 +225,102 @@ html {
     text-align: center;
     margin: 2rem 38rem; }
 
-.faq__para {
-  width: 37%;
-  margin: 2rem auto;
-  text-align: center; }
+.faq {
+  width: 100%; }
+  .faq__para {
+    width: 37%;
+    margin: 2rem auto;
+    text-align: center; }
+  .faq__ques {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    width: 40%;
+    padding: 2rem 0;
+    border-bottom: 2px solid #eee;
+    cursor: pointer; }
+    .faq__ques-q {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin: 0 auto;
+      position: relative; }
+      .faq__ques-q:hover {
+        color: #fa5757; }
+    .faq__ques--para {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+      font-size: 1.6rem;
+      margin: 2rem auto; }
+    .faq__ques--open {
+      display: inline;
+      visibility: visible;
+      opacity: 1; }
+  .faq-arrow {
+    height: 2rem;
+    width: 2rem; }
+  .faq__arrow {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    fill: #fa5757; }
+  .faq__btn {
+    padding: 1.5rem 2rem;
+    margin: 4rem auto;
+    display: block; }
+
+.contact {
+  height: 40vh;
+  background-color: #5368df;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .contact__h3 {
+    margin-top: 4rem;
+    font-weight: 400; }
+  .contact__h2 {
+    font-weight: 500; }
+  .contact__form {
+    display: flex;
+    width: 30%;
+    margin: 4rem auto;
+    justify-content: space-between; }
+    .contact__form--field {
+      width: 60%;
+      border-radius: 4px;
+      padding: 1rem 2rem;
+      border: none; }
+    .contact__form--btn {
+      background-color: #fa5757;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      margin-top: 0; }
+
+.footer {
+  display: flex;
+  background-color: #252b46;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh; }
+  .footer__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%; }
+    .footer__nav a {
+      text-decoration: none;
+      color: #fff; }
+    .footer__nav--logo {
+      height: 5rem;
+      width: 20rem; }
+  .footer__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 10%; }
