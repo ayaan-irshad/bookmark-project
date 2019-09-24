@@ -19,6 +19,11 @@ html {
     @media only screen and (max-width: 78.125em) {
         font-size: 50%;
     }
+
+    @media only screen and (max-width: 62.5em) {
+        font-size: 40%;
+    }
+
 }
 
 ////////////////////////////////////////////
@@ -32,8 +37,21 @@ html {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    
+    justify-content: space-around;
+
+    @media only screen and (max-width: 62.5em) {
+        height: 85vh;
+    }
+
+    @media only screen and (max-width: 54.5em) {
+        height: auto;
+        margin-bottom: 5rem;
+    }
+
+    @media only screen and (max-width: 30em) {
+        padding-left: 5rem;
+    }
+
     &__logo {
         height: 3rem;
         width: 18rem;
@@ -45,14 +63,29 @@ html {
         align-items: center;
         margin-right: 4rem;
 
+        @media only screen and (max-width: 54.5em) {
+            flex-direction: column-reverse;
+            margin-top: 5rem;
+        }
         
         &--right { //    HEADER RIGHT SECTION
 
             position: relative;
 
+            @media only screen and (max-width: 54.5em) {
+                margin-top: 5rem;
+            }
+
+
             img {
                 position: relative;
                 z-index: 1;   
+                max-width: 65.7rem;
+
+                @media only screen and (max-width: 54.5em) {
+                    max-width: 50rem;
+                }
+
             }
             
             div {
@@ -67,21 +100,41 @@ html {
             width: 41%;
             margin-top: -7rem;
 
+            @media only screen and (max-width: 54.5em) {
+                margin-top: 0;
+                width: 90%;
+                text-align: center;
+
+            }
             h1 {
                 margin-bottom: 4rem;
                 font-weight: 500;
-                font-size: 4rem;
+                font-size: 5rem;
+
+                @media only screen and (max-width: 70em) {
+                    font-size: 4rem;
+                }
             }
 
             p {
-                
+                @media only screen and (max-width: 54.5em) {
+                    width: 55%;
+                    margin: 0 auto;
+                }
 
+                @media only screen and (max-width: 30em) {
+                    width: 70%;
+                }
             }
             &__btns {
                 button {
                     font-weight: 500;
                     padding: 1.5rem 3rem;
 
+                    @media only screen and (max-width: 54.5em) {
+                        padding: 1rem 2rem;
+
+                    }
                     &:last-child {
                         color: black;
                         background-color: #f3f3f3;  
@@ -113,6 +166,11 @@ html {
         letter-spacing: 2px;        
         font-weight: 500;
 
+        @media only screen and (max-width: 43.75em) {
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+        }
 
         }
         &--login {
@@ -130,11 +188,24 @@ html {
 ////////////////////////////////////////
 ////// FEATURES
 
+@keyframes slide {
+    0% {
+      transform: translateX(-2.5rem);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
 .features {
-    height: 100vh;
     padding-left: 7rem;
 
+    @media only screen and (max-width: 30em) {
+        padding-left: 0;
+    }
+
     &__heading {
+        
         
      }
  
@@ -142,6 +213,11 @@ html {
         margin: 2rem auto;
         width: 40%;
         text-align: center;
+
+        @media only screen and (max-width: 43.75em) {
+            width: 60%;
+
+        }
      }
 
 
@@ -154,22 +230,39 @@ html {
         margin-left: 5rem;
         margin-top: 5rem;
         margin-bottom: 10rem;
+        animation: slide .3s ease-out forwards;
+        @media only screen and (max-width: 43.75em) {
+            flex-direction: column-reverse;
+        }
         
         &--left { //    HEADER RIGHT SECTION
             position: relative;
+            max-height: 34.6rem;
+
             img {
                 position: relative;
                 z-index: 1;
+                max-width: 53.6rem;
+
+                @media only screen and (max-width: 54.5em) {
+                    max-width: 40rem;
+                }
             }
-
-
-            
+                        
             div {
                 position: absolute;
                 z-index: 0;
 
-                left: -345px;
+                left: -414px;
                 bottom: -55px;
+
+                @media only screen and (max-width: 43.75em) {
+                    top: 29px;
+                }
+            }
+
+            .shape__pyara {
+                height: 25rem;
             }
         }
 
@@ -178,7 +271,14 @@ html {
             flex-direction: column;
             align-items: flex-start;
             width: 36%;
-            margin-right: 10rem;
+            margin-right: 15rem;
+
+            @media only screen and (max-width: 43.75em) {
+                align-items: center;
+                margin-top: 8rem;
+                width: 70%;
+                margin-right: 4rem;
+            }
 
             h1 {
                 font-weight: 500;
@@ -207,7 +307,15 @@ html {
                 font-size: 2rem;
                 background-color: #fff;
                 cursor: pointer;
+                white-space: pre;
+                
 
+                @media only screen and (max-width: 43.75em) {
+                    display: block;
+                    border-top: 1px solid #eee;
+
+                }
+                
                 &:focus {
                     //border-bottom: 2px solid $color-secondary;       
                     outline: none;
@@ -227,32 +335,56 @@ html {
     }
 }
 
-
 .border__for-btn {
     border-bottom: 2px solid $color-secondary;
 }
 ////////////////////////////////////////////////////
-/////////// HEADING SECTION
+/////////// DOWNLOAD SECTION
 
 .download {
-    height: 100vh;
     margin-top: 15rem;
     margin-bottom: 10rem;
+
+    @media only screen and (max-width: 54.5em) {
+        height: auto;
+    }
+
+    @media only screen and (max-width: 43.75em) {
+        margin-left: 10rem;
+    }
+
+    @media only screen and (max-width: 30em) {
+        margin-left: 4rem;
+    }
+
+    
+
     &__box {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 90%;
         margin-top: -10rem;
+
+        @media only screen and (max-width: 54.5em) {
+            flex-direction: column;
+            margin-top: 10rem;
+        }
         
         h3 {
-            font-weight: 400;
-
+            font-weight: 500;
+            
+            @media only screen and (max-width: 62.5em) {
+                font-size: 3rem;
+            }
         }
         p {
             font-size: 1.2rem;
             color: $color-blue-gray;
 
+            @media only screen and (max-width: 62.5em) {
+                font-size: 2rem;
+            }
         }
 
         button {
@@ -263,6 +395,15 @@ html {
     &__para {
         text-align: center;
         margin: 2rem 38rem;
+
+        @media only screen and (max-width: 43.75em) {
+            margin: 2rem 18rem;
+        }
+
+        @media only screen and (max-width: 30em) {
+            margin: 2rem 9rem;
+        }
+
     }
 }
 
@@ -275,8 +416,18 @@ html {
         width: 37%;
         margin: 2rem auto;
         text-align: center;
+
+        @media only screen and (max-width: 30em) {
+            width: 46%; 
+        }
     }
 
+    &__heading {
+        @media only screen and (max-width: 30em) {
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
     &__ques {
         display: flex;
         flex-direction: column;
@@ -285,6 +436,20 @@ html {
         padding: 2rem 0;
         border-bottom: 2px solid #eee;
         cursor: pointer;
+
+        @media only screen and (max-width: 62.5em) {
+            font-size: 2.2rem;
+        }
+
+        @media only screen and (max-width: 43.75em) {
+            margin: 0 auto;
+            font-size: 2.7rem;
+            width: 60%;
+        }
+
+        @media only screen and (max-width: 30em) {
+            width: 75%;
+        }
 
         &-q {
             display: flex;
@@ -313,7 +478,6 @@ html {
             opacity: 1;
         }
 
-        
     }
 
     &-arrow {
@@ -321,14 +485,10 @@ html {
         width: 2rem;
     }
     &__arrow {
-        transform: rotate(180deg);
         -webkit-transform:rotate(180deg);
-        -moz-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        -o-transform: rotate(180deg);
         transform: rotate(180deg);
 
-        fill: $color-secondary;
+        filter: grayscale(100%) brightness(142%) sepia(100%) hue-rotate(-50deg) saturate(476%) contrast(0.8);
 
     }
 
@@ -349,38 +509,114 @@ html {
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
+    justify-content: space-evenly;
+    align-items: center;
     
     &__h3 {
-        margin-top: 4rem;   
         font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 1.5rem;
     }
 
     &__h2 {
         font-weight: 500;
+        width: 65%;
     }
 
     &__form {
         display: flex;
         width: 30%;
-        margin: 4rem auto;
         justify-content: space-between;
+        align-items: center;
+
+        @media only screen and (max-width: 78.125em) {
+            width: 42%;
+        }
+
+        @media only screen and (max-width: 43.75em) {
+            flex-direction: column;
+            width: 60%;
+        }
+
+        @media only screen and (max-width: 30em) {
+            width: 85%;
+        }
 
         &--field {
-            width: 60%;
-            border-radius: 4px;
-            padding: 1rem 2rem;
-            border: none;
+            width: 66%;
+
+            @media only screen and (max-width: 78.125em) {
+                width: 65%;
+            }
+
+            @media only screen and (max-width: 43.75em) {
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+    
+
+            &-input {
+                width: 100%;
+                border-radius: 4px;
+                padding: 1.2rem 2rem;
+                border: none;
+
+                @media only screen and (max-width: 78.125em) {
+                    padding: 2rem 2rem;
+                }
+
+                &:focus:invalid {
+                    box-shadow: inset 0 0 0 4px $color-secondary;
+                }
+            
+            }
+
+            &-input:focus:invalid + &-invalid {
+                    height: 20px;
+            }
+
+
+            &-invalid {
+                display: block;
+                height: 0;
+                padding: 0 .7rem;
+                overflow: hidden;
+                color: #faffff;
+                font-size: 1.2rem;
+                font-style: italic;
+                line-height: 1.8;
+                text-align: left;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                background-color: $color-secondary;
+                transition: height .4s ease-out;
+
+                @media only screen and (max-width: 78.125em) {
+                    font-size: 1.7rem;
+                }
+
+                @media only screen and (max-width: 43.75em) {
+                    font-size: 2rem;
+                }
+            }
 
         }
 
         &--btn {
             background-color: $color-secondary;
             padding: 1rem 2rem;
-            font-size: 1.5rem;
-            margin-top: 0;
+            font-size: 1.5rem;  
+            margin-top: 0;  
 
+            @media only screen and (max-width: 78.125em) {
+                padding: 1.5rem 2rem;
+                font-size: 2rem;
+            }
+
+            @media only screen and (max-width: 43.75em) {
+                width: 100%;
+            }
         }
     }    
 }
@@ -393,19 +629,34 @@ html {
     background-color: $color-blue-very-dark;
     justify-content: space-between;
     align-items: center;
+   // height: 10vh;
+    text-transform: uppercase;
 
+    @media only screen and (max-width: 43.75em) {
+        flex-direction: column;
+    }
 
-    height: 10vh;
     &__nav {
         display: flex;
         align-items: center;
         justify-content: space-around;
         width: 50%;
+        & > * {
+            margin: 2rem 0;
+        }
+        @media only screen and (max-width: 43.75em) {
+            flex-direction: column;
+        }
 
         a {
             text-decoration: none;
             color: #fff;
         }
+
+        a:hover {
+            color: $color-secondary;
+        }
+        
 
         &--logo {
             height: 5rem;
@@ -413,11 +664,200 @@ html {
         }
     }
 
-
     &__social {        
         display: flex;
         align-items: center;
         justify-content: space-around;
         width: 10%;
+        margin: 2rem 0;
+ 
+        @media only screen and (max-width: 43.75em) {
+            width: 20%;
+        }
+
+        img:hover {
+            filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+        }
     }
+}
+
+
+///////////////////////////////////////////////////////////////////
+/////// NAVIGATION MENU FOR MOBILE DEVICES
+
+.navigation {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+
+    @media only screen and (max-width: 43.75em) {
+        display: inline;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        height: 8rem;
+        width: 8rem;
+        position: absolute;
+        top: 1rem;
+        right: 6rem;
+        z-index: 2000;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    &__background {
+        height: 7rem;
+        width: 7rem;
+        border-radius: 50%;
+        background-color: #fff;
+        position: absolute;
+        top: 1.5rem;
+        right: 6.5rem;
+        z-index: 1000;
+    }
+
+    &__nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 800;
+        background-color: rgba($color-blue-very-dark, .9);  
+
+        opacity: 0;
+        width: 0;
+
+        transition: all .4s;
+
+        &--logo {
+            z-index: 3000;
+            fill: #fff;
+            height: 6rem;
+            width: 28rem;
+        }
+    }
+
+    &__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        list-style: none;
+        text-align: center;
+
+        width: 80%;
+
+    }
+
+    &__cont {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-41%, -610%);
+        color: #fff;
+        list-style: none;
+        text-align: left;
+        width: 80%;
+    }
+
+    &__item {
+        padding: 2rem 4rem;
+        margin: .5rem 0;
+        border-top: 1px solid $color-blue-gray;
+        width: 80%;
+        display: inline-block;
+        transition: all .2s;
+        cursor: pointer;
+
+        &--login {
+            border: 2px solid #fff;
+            border-radius: 4px;
+        }
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 3px;
+        font-size: 2rem;
+        color: currentColor;
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 15rem;
+
+        img:hover {
+            filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+        }
+    }
+    // FUNCTIONALITY
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+    }
+
+      
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+        background-color: #fff;
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);        
+        background-color: #fff;
+    }
+
+    &__checkbox:checked ~ &__background {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    // ICON 
+    &__icon {
+        position: relative;
+
+        margin-top: 24px;
+        transform: translateX(15px);
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 3px;
+            background-color: black;
+            display: inline-block;
+            transition: all .4s;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+        }
+
+        &::before {top: -7px;}
+        &::after {top: 7px;}
+    }
+   
 }

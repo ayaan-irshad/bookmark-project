@@ -1,6 +1,4 @@
 ///// BUTTONS
-
-
 .btn-nav {  // navigation buttons
     padding: 1.3rem 2.2rem;
     border: 2px solid transparent;
@@ -74,7 +72,7 @@
 
 .card {
     display: flex;
-    height: 35rem;
+    min-height: 340px;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
